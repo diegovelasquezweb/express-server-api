@@ -7,11 +7,11 @@ const openai = new OpenAIApi(configuration);
 
 const generateImage = async (req, res) => {
 
-  const { prompt, size } = req.body;
+  // const { prompt, size } = req.body;
 
   try {
     const response = await openai.createImage({
-      prompt: prompt,
+      prompt: "dog",
       n: 1,
       size: '512x512',
     });
